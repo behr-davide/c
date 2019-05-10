@@ -25,13 +25,13 @@ class Main extends React.Component {
   render() {
     return (
       <Layout>
-        {this.props.playing.track
-          ? <NowPlaying
-              track={this.props.playing.track}
-              user={this.props.playing.user}
-              position={this.props.playing.position}
-            />
-          : null}
+        {this.props.playing.track ? (
+          <NowPlaying
+            track={this.props.playing.track}
+            user={this.props.playing.user}
+            position={this.props.playing.position}
+          />
+        ) : null}
         <div className="app">
           <style jsx>
             {`

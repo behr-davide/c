@@ -6,7 +6,9 @@ import flush from 'styled-jsx/server';
 export default class IntlDocument extends Document {
   static async getInitialProps(context) {
     const props = await super.getInitialProps(context);
-    const { req: { locale, localeDataScript } } = context;
+    const {
+      req: { locale, localeDataScript }
+    } = context;
     const { html, head, errorHtml, chunks } = context.renderPage();
     const styles = flush();
     return { html, head, errorHtml, chunks, styles, locale, localeDataScript };
